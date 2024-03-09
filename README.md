@@ -5,7 +5,7 @@ Title: Python Programming Internship Tasks <br>
 Subtitle: CSEdge Internship Program <br>
 Author: Team CSEdge <br>
 Level: Easy, Medium, Hard <br>
-Questions per Level: 4 <br>
+Questions per Level: 4 <br>a
 Total Questions: 12 <br>
 
 ### Setup
@@ -120,6 +120,14 @@ Task 8: Linear Regression with Scikit-learn
 
 Apply linear regression to predict house prices from Boston housing dataset using scikit-learn. Compare train and test scores and plot residuals.
 
+### Hard Level Tasks
+
+Task 9: Image Converter
+-----------------------
+Write a program that accepts images in multiple formats (JPEG, PNG, BMP, GIF) and converts them into desired format using Python Imaging Library (PIL).
+
+Task 10: Image Compressor
+--------------------------
 
 FAQ
 ---
