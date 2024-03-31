@@ -33,11 +33,13 @@ After finishing a task, create a separate folder inside your named folder for th
 Table of Contents
 -----------------
 
-* [Introduction](#introduction)
-* [Easy Level Tasks](#easy-level-tasks)
-* [Medium Level Tasks](#medium-level-tasks)
-* [Hard Level Tasks](#hard-level-tasks)
-* [Conclusion](#conclusion)
+<a href="#introduction"><img alt="Intro" src="https://img.shields.io/badge/Introduction%20-%23E34F26.svg?&style=for-the-badge"/></a> <br>
+<a href="#easy-level"><img alt="easy-level" src="https://img.shields.io/badge/Easy Level%20-%23E34F26.svg?&style=for-the-badge"/></a> <br>
+<a href="#medium-level"><img alt="medium-level" src="https://img.shields.io/badge/Medium Level%20-%23E34F26.svg?&style=for-the-badge"/></a> <br>
+<a href="#hard-level"><img alt="hard-level" src="https://img.shields.io/badge/Hard Level%20-%23E34F26.svg?&style=for-the-badge"/></a> <br>
+<a href="#conclusion"><img alt="conclusion" src="https://img.shields.io/badge/Conclusion%20-%23E34F26.svg?&style=for-the-badge"/></a> <br>
+
+<a id="introduction"></a>
 
 Introduction
 ------------
@@ -66,68 +68,56 @@ Evaluation Criteria
 
 Now let's dive into the tasks!
 
-### Easy Level Tasks
+<a id="easy-level"></a>
 
-Task 1: String Reversal
------------------------
+**Beginner Level:**
 
-Write a function called `reverse_string(input_str)` which accepts a string as an argument and returns the reversed version without spaces.
+1. Simple Calculator:
+   - Create a basic calculator application that performs arithmetic operations like addition, subtraction, multiplication, and division.
 
+2. To-Do List:
+   - Develop a console-based or GUI application for managing tasks with features like adding, deleting, and marking tasks as completed.
 
-Task 2: Palindrome Checker
--------------------------
+3. Number Guessing Game:
+   - Implement a program where the computer generates a random number and the player tries to guess it within a certain number of attempts.
 
-Create a function named `is_palindrome(word)` that takes a word as input and determines whether it reads the same backward as forward. Return True if it does; otherwise, return False.
+4. PDF Converter:
+   - Build a tool that converts PDF files into different formats such as text, images, or other document types.
+  
+<a id="medium-level"></a>
 
+**Intermediate Level:**
 
-Task 3: Count Vowels and Consonants
-----------------------------------
+5. Weather App:
+   - Create a program that fetches weather data from an API and displays current weather conditions, forecasts, and temperature trends.
 
-Create a function named `count_vowels_and_consonants(sentence)` which receives a sentence and calculates the count of vowels and consonants separately. It should output a dictionary with keys 'vowels' and 'consonants', both having integer values representing counts.
+6. Web Scraper:
+   - Develop a tool to extract data from websites by scraping HTML content and storing it in a structured format like CSV or JSON.
 
+7. Chatbot:
+   - Build a simple chatbot using natural language processing techniques to respond to user queries and provide relevant information.
 
-Task 4: Find Common Elements
-----------------------------
-
-Given two lists, write a function `find_common_elements(list1, list2)` which outputs a new list containing common items found in both given arrays.
-
-### Medium level tasks
-
-Task 5: Array Manipulation with NumPy
--------------------------------------
-
-Utilizing NumPy, develop a script that performs the following array manipulations:
-
-- Generating random matrices with dimensions 3x3 and 5x5
-- Calculating matrix addition, subtraction, multiplication, and transposition
-- Computing determinant, trace, inverse, eigenvalues, and eigenvectors
+8. PDF Merger/Splitter:
+   - Write a program that merges multiple PDF files into one or splits a PDF file into multiple smaller files.
+  
+<a id="hard-level"></a>
 
 
-Task 6: Data Analysis with Pandas
----------------------------------
+**Advanced Level:**
 
-Load the "Iris" dataset from Seaborn and analyze it using Pandas. Perform exploratory data analysis, cleaning, aggregation, visualizations, and correlation calculations.
+9. Image Converter:
+   - Write a program that accepts images in multiple formats (JPEG, PNG, BMP, GIF) and converts them into a desired format using Python Imaging Library (PIL).
 
+10. Data Analysis with Pandas:
+    - Load the "Iris" dataset from Seaborn and analyze it using Pandas. Perform exploratory data analysis, cleaning, aggregation, visualizations, and correlation calculations.
 
-Task 7: Basic NLP with NLTK
----------------------------
+11. Linear Regression with Scikit-learn:
+    - Apply linear regression to predict house prices from the Boston housing dataset using scikit-learn. Compare train and test scores and plot residuals.
 
-Perform tokenization, part-of-speech tagging, lemmatization, stopwords removal, and stemming on sentences using the NLTK library.
-
-
-Task 8: Linear Regression with Scikit-learn
---------------------------------------------
-
-Apply linear regression to predict house prices from Boston housing dataset using scikit-learn. Compare train and test scores and plot residuals.
-
-### Hard Level Tasks
-
-Task 9: Image Converter
------------------------
-Write a program that accepts images in multiple formats (JPEG, PNG, BMP, GIF) and converts them into desired format using Python Imaging Library (PIL).
-
-Task 10: Image Compressor
---------------------------
+12. Image Compression:
+    - Develop a Python tool for compressing images while maintaining quality. Explore compression techniques like RLE and DCT. Allow users to adjust compression quality, support various image formats, and provide output options. Optionally, include a user interface. Ensure code modularity, performance optimization, and test with diverse images, along with comprehensive documentation.
+   
+<a id="conclusion"></a>
 
 FAQ
 ---
