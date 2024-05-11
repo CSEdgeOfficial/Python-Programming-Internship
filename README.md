@@ -116,6 +116,11 @@ Now let's dive into the tasks!
 
 12. Image Compression:
     - Develop a Python tool for compressing images while maintaining quality. Explore compression techniques like RLE and DCT. Allow users to adjust compression quality, support various image formats, and provide output options. Optionally, include a user interface. Ensure code modularity, performance optimization, and test with diverse images, along with comprehensive documentation.
+
+# Our Contributors ✨
+<a href="https://github.com/CSEdgeOfficial/Python-Programming-Internship/graphs/contributors">
+  <img align="center" src="https://contrib.rocks/image?max=100&repo=CSEdgeOfficial/Python-Programming-Internship" />
+</a> 
    
 <a id="conclusion"></a>
 
