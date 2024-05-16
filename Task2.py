@@ -1,0 +1,61 @@
+class TaskManager:
+    def _init_(self):
+        self.tasks = []
+
+    def add_task(self, task):
+        self.tasks.append(task)
+        print("Task added successfully.")
+
+    def delete_task(self, task_index):
+        if task_index < len(self.tasks):
+            del self.tasks[task_index]
+            print("Task deleted successfully.")
+        else:
+            print("Invalid task index.")
+
+    def mark_completed(self, task_index):
+        if task_index < len(self.tasks):
+            self.tasks[task_index]['completed'] = True
+            print("Task marked as completed.")
+        else:
+            print("Invalid task index.")
+
+    def display_tasks(self):
+        print("\nTasks:")
+        for index, task in enumerate(self.tasks):
+            print(f"{index + 1}. {task['description']} - {'Completed' if task['completed'] else 'Pending'}")
+
+
+def main():
+    task_manager = TaskManager()
+
+    while True:
+        print("\nTask Manager")
+        print("1. Add Task")
+        print("2. Delete Task")
+        print("3. Mark Task as Completed")
+        print("4. Display Tasks")
+        print("5. Exit")
+
+        choice = input("Enter your choice: ")
+
+        if choice == '1':
+            description = input("Enter task description: ")
+            task_manager.add_task({'description': description, 'completed': False})
+        elif choice == '2':
+            task_index = int(input("Enter index of task to delete: ")) - 1
+            task_manager.delete_task(task_index)
+        elif choice == '3':
+            task_index = int(input("Enter index of task to mark as completed: ")) - 1
+            task_manager.mark_completed(task_index)
+        elif choice == '4':
+            task_manager.display_tasks()
+        elif choice == '5':
+            print("Exiting...")
+            break
+        else:
+            print("Invalid choice. Please try again.")
+
+
+if _name_ == "_main_":
+    main()
