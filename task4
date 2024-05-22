@@ -1,0 +1,56 @@
+## To-Do List
+import cmd
+class TaskManager(cmd.Cmd):
+    """Simple task manager"""
+
+    intro = "Welcome to Task Manager! Type 'help' for a list of commands."
+    prompt = "(taskmgr) "
+
+    def __init__(self):
+        super().__init__()
+        self.tasks = []
+
+    def do_add(self, arg):
+        """Add a new task: add <task_description>"""
+        self.tasks.append(arg)
+        print("Task added successfully.")
+
+    def do_delete(self, arg):
+        """Delete a task by index: delete <task_index>"""
+        try:
+            index = int(arg)
+            if 0 <= index < len(self.tasks):
+                del self.tasks[index]
+                print("Task deleted successfully.")
+            else:
+                print("Invalid task index.")
+        except ValueError:
+            print("Invalid task index.")
+
+    def do_list(self, arg):
+        """List all tasks"""
+        if self.tasks:
+            for i, task in enumerate(self.tasks):
+                print(f"{i}: {task}")
+        else:
+            print("No tasks found.")
+
+    def do_mark(self, arg):
+        """Mark a task as completed: mark <task_index>"""
+        try:
+            index = int(arg)
+            if 0 <= index < len(self.tasks):
+                self.tasks[index] += " (completed)"
+                print("Task marked as completed.")
+            else:
+                print("Invalid task index.")
+        except ValueError:
+            print("Invalid task index.")
+
+    def do_quit(self, arg):
+        """Exit Task Manager"""
+        print("Exiting Task Manager. Goodbye!")
+        return True
+
+if __name__ == "__main__":
+    TaskManager().cmdloop()
