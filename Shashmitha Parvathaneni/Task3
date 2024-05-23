@@ -1,0 +1,38 @@
+## Data Analysis with Pandas
+#import libraries
+import seaborn as sns
+import pandas as pd
+import matplotlib.pyplot as plt
+# Load the Iris dataset
+iris = sns.load_dataset('iris')
+# Display basic information about the dataset
+print("Basic Information about the Iris dataset:")
+print(iris.info())
+# Display the first few rows of the dataset
+print("\nFirst few rows of the Iris dataset:")
+print(iris.head())
+# Check for missing values
+print("\nChecking for missing values:")
+print(iris.isnull().sum())
+# Descriptive statistics
+print("\nDescriptive statistics of the Iris dataset:")
+print(iris.describe())
+# Aggregations
+print("\nAverage values of each species:")
+print(iris.groupby('species').mean())
+# Visualizations
+# Pairplot
+sns.pairplot(iris, hue='species')
+plt.title('Pairplot of Iris Dataset')
+plt.show()
+# Boxplot
+plt.figure(figsize=(10, 6))
+sns.boxplot(data=iris, x='species', y='petal_length')
+plt.title('Boxplot of Petal Length by Species')
+plt.show()
+# Correlation matrix
+correlation_matrix =iris.corr()
+plt.figure(figsize=(8, 6))
+sns.heatmap(correlation_matrix, annot=True, cmap='coolwarm', linewidths=0.5)
+plt.title('Correlation Matrix of Iris Dataset')
+plt.show()

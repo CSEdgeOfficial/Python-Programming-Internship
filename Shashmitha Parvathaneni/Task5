@@ -1,0 +1,32 @@
+## chatbot
+import nltk
+from nltk.chat.util import Chat, reflections
+import webbrowser
+import subprocess
+
+# Define some patterns and responses
+patterns = [
+    (r'hello|hi|hey', ['Hello!', 'Hi there!']),
+    (r'how are you', ['I am doing well, thank you!']),
+    (r'what can you do', ['I can provide information and open applications. Just ask!']),
+    (r'open (.+)', ['Opening {0}...', lambda x: open_application(x[0])])
+]
+
+# Function to open applications
+def open_application(app_name):
+    if app_name.lower() == 'calculator':
+        subprocess.Popen('calc.exe')
+    elif app_name.lower() == 'notepad':
+        subprocess.Popen('notepad.exe')
+    else:
+        webbrowser.open(app_name + '.com')
+
+# Create a chatbot
+chatbot = Chat(patterns, reflections)
+
+# Start the conversation
+print("Welcome! How can I help you?")
+while True:
+    user_input = input("You: ")
+    response = chatbot.respond(user_input)
+    print("Bot:", response)
