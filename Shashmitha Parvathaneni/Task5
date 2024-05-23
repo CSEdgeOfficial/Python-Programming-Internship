@@ -1,24 +1,32 @@
 ## chatbot
 import nltk
 from nltk.chat.util import Chat, reflections
-# Define the patterns and responses
-patterns = [
-    (r'hi|hello|hey', ['Hello!', 'Hi there!', 'Hey!']),
-    (r'how are you?', ['I am good, thank you!', 'I am doing well, thank you for asking.']),
-    (r'your name?', ['I am a chatbot.', 'My name is Chatbot.']),
-    (r'(weather|temperature) (.*)', ['I am sorry, I cannot provide weather information.']),
-    (r'quit', ['Bye!', 'Goodbye!', 'See you later.'])
-]
-# Create the chatbot
-chatbot = Chat(patterns, reflections)
-def simple_chat():
-    print("Chatbot: Hi! How can I help you today?")
-    while True:
-        user_input = input("You: ")
-        response = chatbot.respond(user_input)
-        print("Chatbot:", response)
-        if user_input.lower() == 'quit':
-            break
+import webbrowser
+import subprocess
 
-if __name__ == "__main__":
-    simple_chat()
+# Define some patterns and responses
+patterns = [
+    (r'hello|hi|hey', ['Hello!', 'Hi there!']),
+    (r'how are you', ['I am doing well, thank you!']),
+    (r'what can you do', ['I can provide information and open applications. Just ask!']),
+    (r'open (.+)', ['Opening {0}...', lambda x: open_application(x[0])])
+]
+
+# Function to open applications
+def open_application(app_name):
+    if app_name.lower() == 'calculator':
+        subprocess.Popen('calc.exe')
+    elif app_name.lower() == 'notepad':
+        subprocess.Popen('notepad.exe')
+    else:
+        webbrowser.open(app_name + '.com')
+
+# Create a chatbot
+chatbot = Chat(patterns, reflections)
+
+# Start the conversation
+print("Welcome! How can I help you?")
+while True:
+    user_input = input("You: ")
+    response = chatbot.respond(user_input)
+    print("Bot:", response)
